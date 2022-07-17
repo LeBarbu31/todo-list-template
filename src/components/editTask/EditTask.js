@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { updateTask } from '../../redux/action/task.action';
 
-export default function TaskDetail({ editTask }) {
+export default function EditTask({ editTask }) {
 
     const [taskTitle, setTaskTitle] = useState(editTask.title);
     const [taskComment, setTaskComment] = useState(editTask.comment);
