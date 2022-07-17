@@ -19,25 +19,25 @@ export default function TodoCard({ task }) {
 
     return (
         <div className="todo-card-container">
-            <div className="todo-card-header">
-                <div className="todo-card-header-left">
-                    <input
-                        type="checkbox"
-                        className="todo-card-btn done"
-                        defaultChecked={task.doneState}
-                        onClick={() => handleClickDone()} />
-                    <label className="todo-card-title">{task.title}</label>
-                </div>
-                <div className="todo-card-action">
-                    <button
-                        className="todo-card-btn delete"
-                        onClick={() => handleClickDelete()}>
-                        delete
-                    </button>
-                    <button className="todo-card-btn edit">
-                        <Link to={`/task/${task.taskId}`}>edit</Link>
-                    </button>
-                </div>
+            <div className="todo-card-left">
+                <button
+                    className="todo-card-btn done"
+                    onClick={() => handleClickDone()}>
+                    <img className={`done_icon ${(!task.doneState) ? 'inprogress' : ''}`} src="./icons/done.svg" />
+                </button>
+                <label className="todo-card-title">{task.title}</label>
+            </div>
+            <div className="todo-card-action">
+                <button className="todo-card-btn edit">
+                    <Link to={`/task/${task.taskId}`}>
+                        <img src="./icons/edit.svg" />
+                    </Link>
+                </button>
+                <button
+                    className="todo-card-btn delete"
+                    onClick={() => handleClickDelete()}>
+                    <img src="./icons/delete.svg" />
+                </button>
             </div>
         </div>
     )
