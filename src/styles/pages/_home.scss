@@ -1,3 +1,40 @@
-h1 {
-  color: red;
+#header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 3rem;
+  min-height: 25vh;
+  width: 100%;
+}
+
+.page-title {
+  white-space: pre;
+  letter-spacing: 0.2rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  .todo_list_order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    min-width: 45%;
+    list-style: none;
+    &.open {
+      padding-bottom: 20px;
+      border-bottom: solid 2px #626262;
+    }
+    &.close {
+      padding-top: 20px;
+    }
+    .todo-card-container {
+      width: 100%;
+    }
+  }
 }

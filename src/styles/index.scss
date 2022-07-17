@@ -2,8 +2,10 @@
 @import "./base/settings";
 
 //Components
+@import "./components/body";
+@import "./components/addTask";
 @import "./components/todoCard";
-@import "./components/modalInput";
+@import "./components/editTask";
 
 //Pages
 @import "./pages/home";
