@@ -1,23 +1,97 @@
-.modal-pop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.25);
+.edit-container {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
-  padding-top: 30vh;
-  .modal-container {
-    background-color: aqua;
+  font-size: 3rem;
+  .edit-header {
+    white-space: pre;
+    letter-spacing: 0.2rem;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  .input-done {
+    background-color: #01394c;
+    font-size: 22px;
+    padding: 0.3em 0.7em;
+    display: flex;
+    align-items: center;
+    border-radius: 17px;
+    width: fit-content;
+    .done {
+      margin-right: 15px;
+    }
+  }
+  .edit-form {
     height: fit-content;
     padding: 20px 15px;
+    border-radius: 17px;
   }
   .input-group {
     display: flex;
     flex-direction: column;
+    width: 90vw;
+
+    .input-label {
+      padding-top: 20px;
+      padding-bottom: 15px;
+      font-size: 28px;
+    }
+    .input-edit {
+      border: none;
+      font-family: "Work Sans", sans-serif;
+      background-color: #01394c;
+      color: #f1f1f1;
+      border-radius: 17px;
+      font-size: 19px;
+      padding: 0.5em 0.7em;
+      text-overflow: ellipsis;
+      outline: none;
+      border: none;
+    }
+    #task-comment {
+      height: 200px;
+      resize: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
   .modal-pop-action {
     display: flex;
+  }
+  .todo-card-btn {
+    background-color: #002837;
+    color: white;
+    cursor: pointer;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 80%;
+    margin: 0 4px;
+    border: none;
+    outline: none;
+    transition: background-color 200ms ease-in-out;
+    &.done {
+      border: 3px solid #001f29;
+    }
+    .inprogress {
+      opacity: 0;
+    }
+  }
+  .edit-footer {
+    .btn-save {
+      background-color: #002837;
+      font-size: 22px;
+      color: #626262;
+      padding: 0.3em 0.7em;
+      border-radius: 15px;
+      cursor: pointer;
+      border: none;
+      &:hover {
+        background-color: #001f29;
+        color: #f1f1f1;
+        transition: color 200ms ease-in-out;
+      }
+    }
   }
 }

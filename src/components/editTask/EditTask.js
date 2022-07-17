@@ -10,51 +10,59 @@ export default function EditTask({ editTask }) {
     const dispatch = useDispatch();
 
     const handleClickSave = () => {
-        dispatch(updateTask({
-            taskId: editTask.taskId,
-            title: taskTitle,
-            comment: taskComment,
-            doneState: doneState,
-        }))
+        if (taskTitle) {
+            dispatch(updateTask({
+                taskId: editTask.taskId,
+                title: taskTitle,
+                comment: taskComment,
+                doneState: doneState,
+            }))
+        };
     };
 
 
     return (
-        <div className="modal-pop">
-            <div className="modal-container">
-                <div className="modal-header">
-                    <h2>New task</h2>
+        <div className="edit-container">
+            <div className="edit-form">
+                <div className="edit-header">
+                    <h1>Task</h1>
+                    <div className="input-done">
+
+                        <button
+                            className="todo-card-btn done"
+                            onClick={() => setDoneState(!doneState)}>
+                            <img className={`done_icon${(!doneState) ? ' inprogress' : ''}`} src="/icons/done.svg" />
+                        </button>
+                        <label>Task is done</label>
+                    </div>
                 </div>
-                <div className="modal-body">
+                <div className="edit-body">
                     <div className="input-group">
-                        <label htmlFor="task-title">
+                        <label className="input-label task-title">
                             Title<span className="input-require"> *</span>
                         </label>
                         <input
-                            className="task-title"
+                            className="input-edit task-title"
                             id="task-title"
                             type="text"
                             value={taskTitle}
                             onChange={(e) => setTaskTitle(e.target.value)}></input>
                     </div>
                     <div className="input-group">
-                        <label htmlFor="task-comment">
+                        <label className="input-label task-comment">
                             Comments
                         </label>
                         <textarea
-                            className="task-comment"
+                            className="input-edit task-comment"
                             id="task-comment"
                             value={taskComment}
                             onChange={(e) => setTaskComment(e.target.value)}></textarea>
                     </div>
                 </div>
-                <div className="modal-pop-action">
-                    <div className="modal-footer">
-                        <button onClick={() => handleClickSave()}>save</button>
-                    </div>
+                <div className="edit-footer">
+                    <button className="btn-save" onClick={() => handleClickSave()}>Save</button>
                 </div>
-
             </div>
-        </div>
+        </div >
     )
 }
