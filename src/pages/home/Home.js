@@ -14,8 +14,8 @@ export default function Home() {
             </header>
 
             <AddTask />
-            <div className="todo_list">
-                <div className="todo_list_order open">
+            <div className="todo-list">
+                <div className="todo-list-order open">
                     {
                         todoList.map((task, key) => (
                             <Fragment key={key}>
@@ -27,7 +27,7 @@ export default function Home() {
                     }
 
                 </div>
-                <div className="todo_list_order close">
+                <div className="todo-list-order close">
                     {
                         todoList.map((task, key) => (
                             <Fragment key={key}>

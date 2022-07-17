@@ -24,17 +24,16 @@ export default function EditTask({ editTask }) {
     return (
         <div className="edit-container">
             <div className="edit-form">
-                <div className="edit-header">
-                    <h1>Task</h1>
-                    <div className="input-done">
-
-                        <button
-                            className="todo-card-btn done"
-                            onClick={() => setDoneState(!doneState)}>
-                            <img className={`done_icon${(!doneState) ? ' inprogress' : ''}`} src="/icons/done.svg" />
-                        </button>
-                        <label>Task is done</label>
-                    </div>
+                <div id="header">
+                    <h1 class="page-title">Task</h1>
+                </div>
+                <div className="input-done">
+                    <button
+                        className="todo-card-btn done"
+                        onClick={() => setDoneState(!doneState)}>
+                        <img className={`done-icon${(!doneState) ? ' inprogress' : ''}`} src="/icons/done.svg" />
+                    </button>
+                    <label>Task is done</label>
                 </div>
                 <div className="edit-body">
                     <div className="input-group">

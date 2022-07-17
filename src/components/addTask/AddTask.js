@@ -12,7 +12,7 @@ export default function AddTask() {
     };
 
     return (
-        <div id="form_input">
+        <div id="form-input">
             <input
                 class="standard-input"
                 type="text"

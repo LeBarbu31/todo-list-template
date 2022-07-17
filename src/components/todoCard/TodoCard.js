@@ -23,7 +23,7 @@ export default function TodoCard({ task }) {
                 <button
                     className="todo-card-btn done"
                     onClick={() => handleClickDone()}>
-                    <img className={`done_icon ${(!task.doneState) ? 'inprogress' : ''}`} src="./icons/done.svg" />
+                    <img className={`done-icon ${(!task.doneState) ? 'inprogress' : ''}`} src="./icons/done.svg" />
                 </button>
                 <label className="todo-card-title">{task.title}</label>
             </div>
