@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/https//Lebarbu31.github.io/sogeti-todo-list/static/css/main.6b9eecab.css",
+    "main.js": "/https//Lebarbu31.github.io/sogeti-todo-list/static/js/main.64d19fef.js",
+    "static/js/787.bbefb5e0.chunk.js": "/https//Lebarbu31.github.io/sogeti-todo-list/static/js/787.bbefb5e0.chunk.js",
+    "index.html": "/https//Lebarbu31.github.io/sogeti-todo-list/index.html",
+    "main.6b9eecab.css.map": "/https//Lebarbu31.github.io/sogeti-todo-list/static/css/main.6b9eecab.css.map",
+    "main.64d19fef.js.map": "/https//Lebarbu31.github.io/sogeti-todo-list/static/js/main.64d19fef.js.map",
+    "787.bbefb5e0.chunk.js.map": "/https//Lebarbu31.github.io/sogeti-todo-list/static/js/787.bbefb5e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b9eecab.css",
+    "static/js/main.64d19fef.js"
+  ]
+}
