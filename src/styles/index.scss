@@ -1,4 +1,9 @@
 @import "./base/reset";
 @import "./base/settings";
 
+//Components
+@import "./components/todoCard";
+@import "./components/modalInput";
+
+//Pages
 @import "./pages/home";

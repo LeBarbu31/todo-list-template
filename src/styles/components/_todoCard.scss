@@ -1,0 +1,15 @@
+.todo-card-container {
+  display: flex;
+  background-color: aqua;
+  padding: 5px 15px;
+  .todo-card-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    .todo-card-header-left {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
