@@ -8,7 +8,7 @@ export default function AddTask() {
     const dispatch = useDispatch();
 
     const handleClickSave = () => {
-        dispatch(addTask(taskTitle, ''))
+        if (taskTitle) dispatch(addTask(taskTitle, ''))
     };
 
     return (
