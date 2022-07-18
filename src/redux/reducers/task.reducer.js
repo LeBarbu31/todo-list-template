@@ -1,6 +1,6 @@
 import { GET_TASKS, ADD_TASK, DELETE_TASK, UPDATE_TASK, UPDATE_DONESTATE_TASK } from '../action/task.action';
 
-const intitialState = [];
+export const intitialState = [];
 
 export default function taskReducer(state = intitialState, action) {
     switch (action.type) {

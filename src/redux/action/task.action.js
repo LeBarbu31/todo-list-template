@@ -83,5 +83,4 @@ export const updateTask = (taskData) => {
         saveTasksList(updatedTaskList);
         dispatch({ type: UPDATE_TASK, payload: updatedTaskList });
     };
-
 };
