@@ -14,12 +14,12 @@ export default function AddTask() {
     return (
         <div id="form-input">
             <input
-                class="standard-input"
+                className="standard-input"
                 type="text"
                 placeholder="Add a task."
                 onChange={(e) => setTaskTitle(e.target.value)} />
             <button
-                class="todo-btn standard-button"
+                className="todo-btn standard-button"
                 type="submit"
                 onClick={() => handleClickSave()}>
                 Add Task

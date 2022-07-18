@@ -25,7 +25,7 @@ export default function EditTask({ editTask }) {
         <div className="edit-container">
             <div className="edit-form">
                 <div id="header">
-                    <h1 class="page-title">Task</h1>
+                    <h1 className="page-title">Task</h1>
                 </div>
                 <div className="input-done">
                     <button
