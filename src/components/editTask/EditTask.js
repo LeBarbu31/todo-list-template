@@ -7,6 +7,7 @@ export default function EditTask({ editTask }) {
     const [taskTitle, setTaskTitle] = useState(editTask.title);
     const [taskComment, setTaskComment] = useState(editTask.comment);
     const [doneState, setDoneState] = useState(editTask.doneState);
+    const [showSaveBtn, setShowSaveBtn] = useState(false);
     const dispatch = useDispatch();
 
     const handleClickSave = () => {
@@ -18,6 +19,22 @@ export default function EditTask({ editTask }) {
                 doneState: doneState,
             }))
         };
+        setShowSaveBtn(false);
+    };
+
+    const handleChangeComent = (value) => {
+        setTaskComment(value);
+        setShowSaveBtn(true);
+    };
+
+    const handleChangeState = (value) => {
+        setDoneState(value);
+        setShowSaveBtn(true);
+    };
+
+    const handleChangeTitle = (value) => {
+        setTaskTitle(value);
+        setShowSaveBtn(true);
     };
 
 
@@ -30,7 +47,7 @@ export default function EditTask({ editTask }) {
                 <div className="input-done">
                     <button
                         className="todo-card-btn done"
-                        onClick={() => setDoneState(!doneState)}>
+                        onClick={() => handleChangeState(!doneState)}>
                         <img className={`done-icon${(!doneState) ? ' inprogress' : ''}`} src="/icons/done.svg" />
                     </button>
                     <label>Task is done</label>
@@ -45,7 +62,7 @@ export default function EditTask({ editTask }) {
                             id="task-title"
                             type="text"
                             value={taskTitle}
-                            onChange={(e) => setTaskTitle(e.target.value)}></input>
+                            onChange={(e) => handleChangeTitle(e.target.value)}></input>
                     </div>
                     <div className="input-group">
                         <label className="input-label task-comment">
@@ -55,12 +72,15 @@ export default function EditTask({ editTask }) {
                             className="input-edit task-comment"
                             id="task-comment"
                             value={taskComment}
-                            onChange={(e) => setTaskComment(e.target.value)}></textarea>
+                            onChange={(e) => handleChangeComent(e.target.value)}></textarea>
                     </div>
                 </div>
-                <div className="edit-footer">
-                    <button className="btn-save" onClick={() => handleClickSave()}>Save</button>
-                </div>
+                {(showSaveBtn) &&
+                    <div className="edit-footer">
+                        <button className="btn-save" onClick={() => handleClickSave()}>Save</button>
+                    </div>
+                }
+
             </div>
         </div >
     )
