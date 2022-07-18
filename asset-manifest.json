@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b9eecab.css",
-    "main.js": "/static/js/main.3576ea2a.js",
-    "static/js/787.bbefb5e0.chunk.js": "/static/js/787.bbefb5e0.chunk.js",
-    "index.html": "/index.html",
-    "main.6b9eecab.css.map": "/static/css/main.6b9eecab.css.map",
-    "main.3576ea2a.js.map": "/static/js/main.3576ea2a.js.map",
-    "787.bbefb5e0.chunk.js.map": "/static/js/787.bbefb5e0.chunk.js.map"
+    "main.css": "/sogeti-todo-list/static/css/main.6b9eecab.css",
+    "main.js": "/sogeti-todo-list/static/js/main.b0a74aeb.js",
+    "static/js/787.bbefb5e0.chunk.js": "/sogeti-todo-list/static/js/787.bbefb5e0.chunk.js",
+    "index.html": "/sogeti-todo-list/index.html",
+    "main.6b9eecab.css.map": "/sogeti-todo-list/static/css/main.6b9eecab.css.map",
+    "main.b0a74aeb.js.map": "/sogeti-todo-list/static/js/main.b0a74aeb.js.map",
+    "787.bbefb5e0.chunk.js.map": "/sogeti-todo-list/static/js/787.bbefb5e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b9eecab.css",
-    "static/js/main.3576ea2a.js"
+    "static/js/main.b0a74aeb.js"
   ]
 }
